@@ -31,6 +31,5 @@ jobs:
         run: plz-out/bin/tools/performance/gen_parse_tree.pex --plz plz-out/bin/src/please --size 1 && plz-out/bin/tools/performance/parse_perf_test.pex --plz plz-out/bin/src/please -n 1
       - name: Release
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           files: plz-out/pkg
